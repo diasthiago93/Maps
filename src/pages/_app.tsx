@@ -1,9 +1,11 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-import GlobalStyles from 'styles/global';
 import NextNprogress from 'nextjs-progressbar';
-import SEO from '../../next-seo.config';
+
 import { DefaultSeo } from 'next-seo';
+import SEO from '../../next-seo.config';
+
+import GlobalStyles from 'styles/global';
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -18,8 +20,8 @@ function App({ Component, pageProps }: AppProps) {
           integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
           crossOrigin=""
         />
-        <DefaultSeo {...SEO} />
       </Head>
+      <DefaultSeo {...SEO} />
       <GlobalStyles />
       <NextNprogress
         color="#fff"
@@ -31,4 +33,5 @@ function App({ Component, pageProps }: AppProps) {
     </>
   );
 }
+
 export default App;
