@@ -3,9 +3,9 @@ import { GetPlaceBySlugQuery, GetPlacesQuery } from 'graphql/generated/graphql';
 import { GET_PLACES, GET_PLACE_BY_SLUG } from 'graphql/queries';
 import { GetStaticProps } from 'next';
 import { useRouter } from 'next/dist/client/router';
-import PlacesTemplate, { PlaceTemplatePropos } from 'templates/Places';
+import PlacesTemplate, { PlacesTemplateProps } from 'templates/Places';
 
-export default function Place({ place }: PlaceTemplatePropos) {
+export default function Place({ place }: PlacesTemplateProps) {
   const router = useRouter();
   if (router.isFallback) return null;
   return <PlacesTemplate place={place} />;
